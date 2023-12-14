@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  columns: 300px 3;
+  text-align: justify;
+  column-rule: 2px dotted black;
+  column-gap: 80px;
+  line-height: 25px;
+  margin: 10px;
+}
+
+.container > p:first-child {
+  column-span: all;
+}
+
+.container > p {
+  margin-bottom: 20px;
+}
