@@ -25,6 +25,8 @@
   align-items: center;
   padding: 20px 80px;
   z-index: 10;
+  position: sticky;
+  top: 0;
 }
 
 .navbar-container > ul {
@@ -166,3 +168,86 @@ body {
   align-items: center;
 }
 /* Movie-card End */
+
+/* Contact  */
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-box {
+  background-color: var(--text-color);
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+  text-align: center;
+}
+
+.contact-box > h1 {
+  color: red;
+  margin-bottom: 5px;
+}
+
+.contact-box > input {
+  border: none;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  outline: none;
+}
+
+.contact-box > button {
+  border: none;
+  padding: 5px 10px;
+}
+
+.contact-box > button .bxs-send {
+  color: var(--main-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.contact-box > button .bxs-send:hover {
+  transform: scale(1.5);
+}
+/* Contact End */
+
+/* Footer  */
+
+#footer {
+  padding: 50px;
+}
+
+#footer > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer > div:first-child .socials > a {
+  background-color: var(--main-color);
+  border: 3px solid rgba(255, 255, 255, 0.242);
+  margin-left: 20px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  top: 50%;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+}
+
+#footer > div:first-child .socials > a:hover {
+  filter: brightness(150%);
+  transform: scale(0.8);
+}
+
+#footer > div:last-child {
+  margin-top: 10px;
+  text-align: center;
+}
+/* Footer End  */
