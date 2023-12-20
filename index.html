@@ -4,195 +4,130 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- box icons  -->
-    <link rel="stylesheet" href="./icons/boxicons-2.1.4/css/boxicons.min.css" />
+    <!-- font awesomes -->
+    <script
+      src="https://kit.fontawesome.com/2c87f61656.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
 
-    <!-- customCss  -->
-    <link rel="stylesheet" href="./css/app.css" />
+    <!-- Custom Css  -->
+    <link rel="stylesheet" href="app.css" />
 
-    <title>Rider</title>
+    <title>Web Design Project</title>
   </head>
   <body>
-    <!-- header nav -->
-    <header class="navbar-container">
-      <!-- Logo  -->
-      <h1>
-        <a href="#">
-          <span><i class="bx bx-movie"></i></span>
-          <span>Rider</span>
-        </a>
-      </h1>
+    <div class="container">
+      <!-- Navbar -->
+      <nav id="main-nav">
+        <div class="nav-logo">
+          <a href="#" class="nav-logo-name">
+            <span><i class="fa-solid fa-film"></i></span>
+            Rider
+          </a>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li><a href="#movies" class="nav-link">Movies</a></li>
+            <li><a href="#" class="nav-link">Anime</a></li>
+            <li><a href="#" class="nav-link">Series</a></li>
+            <li><a href="#" class="nav-link">On Going</a></li>
+            <li><a href="#" class="nav-link">Sign In</a></li>
+          </ul>
+        </div>
+        <a href="#" class="extraSignIn-btn">Sign In</a>
+      </nav>
 
-      <!-- Menu -->
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#movies">Movies</a></li>
-        <li><a href="#coming">Coming</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <!-- Header -->
+      <header>
+        <div class="backdrop"></div>
+        <img src="./img/background.jpg" alt="background-image" class="bg-img" />
+        <div class="header-text">
+          <h1>
+            Lorem ipsum,<br />
+            adipisicing elit.
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+            assumenda alias autem reiciendis corporis! Similique sapiente
+            commodi quasi, repellat corrupti facere repellendus sint sed.
+          </p>
+          <button class="play-btn">
+            <span><i class="fa-solid fa-play"></i></span>
+            Watch Now
+          </button>
+        </div>
+      </header>
 
-      <!-- Sign In -->
-      <a href="#" class="sign-in">Sign In</a>
-    </header>
-    <!-- header nav close -->
-
-    <!-- Hero Start -->
-    <section id="home">
-      <div class="hero-container">
-        <h1>One Piece</h1>
-        <p>
-          “If you don't take risks,<br />
-          you can't create a future.”
-        </p>
-        <div class="name">Monkey D. Luffy</div>
-
-        <button class="watch-btn">Watch Now</button>
-      </div>
-    </section>
-    <!-- Hero End -->
-
-    <!-- Movies Cards -->
-    <section class="movies-container" id="movies">
-      <h1>Movies</h1>
-
-      <div class="movie-cards-container">
-        <div class="movie-card">
-          <div class="img-box">
+      <!-- Movies  -->
+      <section id="movies">
+        <nav id="movies-nav">
+          <a href="#">Actions</a>
+          <a href="#">Adventure</a>
+          <a href="#">Si-Fi</a>
+          <a href="#">Crime</a>
+        </nav>
+        <div class="movies-cards">
+          <div class="card">
             <img src="./img/1.jpg" alt="" />
           </div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
-        </div>
 
-        <div class="movie-card">
-          <div class="img-box"><img src="./img/2.jpg" alt="" /></div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
-        </div>
+          <div class="card">
+            <img src="./img/3.png" alt="" />
+          </div>
 
-        <div class="movie-card">
-          <div class="img-box"><img src="./img/3.jpg" alt="" /></div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
-        </div>
+          <div class="card">
+            <img src="./img/5.jpg" alt="" />
+          </div>
 
-        <div class="movie-card">
-          <div class="img-box"><img src="./img/4.jpg" alt="" /></div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
-        </div>
+          <div class="card">
+            <img src="./img/2.jpg" alt="" />
+          </div>
 
-        <div class="movie-card">
-          <div class="img-box"><img src="./img/5.jpg" alt="" /></div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
-        </div>
+          <div class="card">
+            <img src="./img/4.png" alt="" />
+          </div>
 
-        <div class="movie-card">
-          <div class="img-box"><img src="./img/1.jpg" alt="" /></div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
-        </div>
+          <div class="card">
+            <img src="./img/2.jpg" alt="" />
+          </div>
 
-        <div class="movie-card">
-          <div class="img-box"><img src="./img/2.jpg" alt="" /></div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
-        </div>
+          <div class="card">
+            <img src="./img/5.jpg" alt="" />
+          </div>
 
-        <div class="movie-card">
-          <div class="img-box"><img src="./img/3.jpg" alt="" /></div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
-        </div>
-
-        <div class="movie-card">
-          <div class="img-box"><img src="./img/4.jpg" alt="" /></div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
-        </div>
-      </div>
-    </section>
-    <!-- Movies Cards End -->
-
-    <!-- Coming Cards -->
-    <section class="movies-container" id="coming">
-      <h1>Coming</h1>
-
-      <div class="movie-cards-container">
-        <div class="movie-card">
-          <div class="img-box">
+          <div class="card">
             <img src="./img/1.jpg" alt="" />
           </div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
         </div>
 
-        <div class="movie-card">
-          <div class="img-box"><img src="./img/2.jpg" alt="" /></div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
+        <div class="watchNow-container">
+          <div class="watchNow-bar"></div>
+          <div class="watchNow-text">Watch Now</div>
         </div>
+      </section>
 
-        <div class="movie-card">
-          <div class="img-box"><img src="./img/3.jpg" alt="" /></div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
-        </div>
-
-        <div class="movie-card">
-          <div class="img-box"><img src="./img/4.jpg" alt="" /></div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
-        </div>
-
-        <div class="movie-card">
-          <div class="img-box"><img src="./img/5.jpg" alt="" /></div>
-          <h3>One Piece</h3>
-          <p>120min | Action</p>
-        </div>
-    </section>
-    <!-- Coming Cards End -->
-
-    <!-- Contact  -->
-    <section id="contact" class="contact-form">
-      <form>
-        <div class="contact-box">
-          <h1>Contact Me</h1>
-          <input type="text" placeholder="Enter Your Email">
-          <button><i class='bx bxs-send'></i></button>
-        </div>
-      </form>
-    </section>
-    <!-- Contact End -->
-
-    <!-- Footer -->
-    <footer id="footer">
-      <div>
-        <a href="#">
-          <span><i class="bx bx-movie"></i></span>
-          <span>Rider</span>
-        </a>
-  
-        <div class="socials">
-          <a href="#">
-            <span><i class="bx bxl-facebook"></i></span>
-          </a>
-          <a href="#">
-            <span><i class="bx bxl-gmail"></i></span>
-          </a>
-          <a href="#">
-            <span><i class="bx bxl-instagram"></i></span>
-          </a>
-          <a href="#">
-            <span><i class="bx bxl-linkedin"></i></span>
+      <!-- Footer  -->
+      <footer id="footer">
+        <div class="footer-logo">
+          <a href="#" class="footer-brand-link">
+            <span><i class="fa-solid fa-film"></i></span>
+            Rider
           </a>
         </div>
-      </div>
-      <div class="copy-right">
-        Rider | Code 4 Fun
-      </div>
-    </footer>
-    <!-- Footer End -->
+        <div class="footer-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+          doloremque repellat minima minus laborum perspiciatis iusto voluptatum
+          dolores atque, dignissimos, in accusantium voluptates aut voluptatem
+          vel eius possimus voluptas corrupti.
+        </div>
+        <div class="footer-socials">
+          <div><i class="fa-brands fa-facebook"></i></div>
+          <div><i class="fa-brands fa-instagram"></i></div>
+          <div><i class="fa-brands fa-youtube"></i></div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
