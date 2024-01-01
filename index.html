@@ -3,9 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="app.css" />
+    <title>Calculator</title>
   </head>
   <body>
+    <div class="container">
+      <div>
+        <div class="mb-4">
+          <div id="result">0</div>
+        </div>
+
+        <div class="mb-4">
+          <label for="num1">Number One</label>
+          <input type="text" id="num1" />
+          <small id="num1Error"></small>
+        </div>
+
+        <div class="mb-4">
+          <label for="num2">Number Two</label>
+          <input type="text" id="num2" />
+          <small id="num2Error"></small>
+        </div>
+
+        <div class="mb-4">
+          <label for="operator">Operator</label>
+          <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">×</option>
+            <option value="/">÷</option>
+          </select>
+          <small id="operatorError"></small>
+        </div>
+
+        <div>
+          <button id="btn">Calculate</button>
+        </div>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
