@@ -1,61 +1,48 @@
-const btn = document.getElementById("btn");
-let isError = false;
+let tbody = document.querySelector("tbody");
+let itemDtail = document.getElementById("itemDetail");
 
-btn.addEventListener("click", function () {
-  let num1 = document.getElementById("num1").value;
-  let num2 = document.getElementById("num2").value;
-  let operator = document.getElementById("operator").value;
-  let res = null;
-
-  if (!validate(num1, num2)) {
-    [num1, num2] = changeInt([num1, num2]);
-
-    switch (operator) {
-      case "+":
-        res = num1 + num2;
-        break;
-      case "-":
-        res = num1 - num2;
-        break;
-      case "*":
-        res = num1 * num2;
-        break;
-      case "/":
-        res = num1 / num2;
-        break;
-      default:
-        res = 0;
-        break;
-    }
+const getItems = async () => {
+  let res = await fetch("https://fakestoreapi.com/products");
+  if (res.status === 200) {
+    let data = await res.json();
+    return data;
   }
+};
 
-  if (res) {
-    document.getElementById("result").innerText = res;
-  } else {
-    document.getElementById("result").innerText = 0;
+getItems().then((data) => {
+  let list = [];
+  for (let i = 0; i < data.length; i++) {
+    const item = data[i];
+    list += `<tr onclick="showDeatil(${data[i].id})" class="dataRow">
+      <td>${item.id}</td>
+      <td>${item.title}</td>
+      <td>${item.price}</td>
+      <td>${item.rating.rate}</td>
+      <td><img src="${item.image}" class="img-thumbnail" width="50"/></td>
+    </tr>`;
   }
+  tbody.innerHTML = list;
 });
 
-function changeInt(strVals = []) {
-  return strVals.map((strVal) => parseInt(strVal));
-}
-
-function validate(num1, num2) {
-  if (num1 == "" || num1 == undefined || num1 == null) {
-    document.getElementById("num1Error").textContent = "Num1 is required";
-    isError = true;
-  } else {
-    document.getElementById("num1Error").textContent = null;
+const showDeatil = async (id) => {
+  let res = await fetch(`https://fakestoreapi.com/products/${id}`);
+  let data = await res.json();
+  if (data !== null) {
+    itemDtail.classList.remove("d-none");
+    itemDtail.innerHTML = `<div class="text-center mb-2">
+    <img src="${data.image}" width="100px" alt="" />
+  </div>
+  <div>
+    <p>Name - ${data.title}</p>
+    <p>Price - ${data.price}</p>
+    <p>Rating - ${data.rating.rate}</p>
+  </div>
+  <div>
+    <button class="btn btn-sm btn-danger float-end" onclick="closeModal()">Close</button>
+  </div>`;
   }
+};
 
-  if (num2 == "" || num2 == undefined || num2 == null) {
-    document.getElementById("num2Error").textContent = "Num2 is required";
-    isError = true;
-  } else {
-    document.getElementById("num2Error").textContent = null;
-  }
-
-  if (isError) false;
-
-  return (isError = false);
-}
+const closeModal = () => {
+  itemDtail.classList.add("d-none");
+};
