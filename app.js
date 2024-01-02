@@ -1,5 +1,5 @@
 let tbody = document.querySelector("tbody");
-let itemDtail = document.getElementById("itemDetail");
+$("#itemDetail").hide();
 
 const getItems = async () => {
   let res = await fetch("https://fakestoreapi.com/products");
@@ -28,8 +28,14 @@ const showDeatil = async (id) => {
   let res = await fetch(`https://fakestoreapi.com/products/${id}`);
   let data = await res.json();
   if (data !== null) {
-    itemDtail.classList.remove("d-none");
-    itemDtail.innerHTML = `<div class="text-center mb-2">
+    if ($("#itemDetail").hasClass("active")) {
+      $("#itemDetail").hide();
+      $("#itemDetail").show(500);
+    } else {
+      $("#itemDetail").show(500);
+      $("#itemDetail").addClass("active");
+    }
+    $("#itemDetail").html(`<div class="text-center mb-2">
     <img src="${data.image}" width="100px" alt="" />
   </div>
   <div>
@@ -39,10 +45,10 @@ const showDeatil = async (id) => {
   </div>
   <div>
     <button class="btn btn-sm btn-danger float-end" onclick="closeModal()">Close</button>
-  </div>`;
+  </div>`);
   }
 };
 
 const closeModal = () => {
-  itemDtail.classList.add("d-none");
+  $("#itemDetail").hide(500);
 };

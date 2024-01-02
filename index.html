@@ -11,12 +11,12 @@
     <title>Fetch API</title>
   </head>
   <body class="bg-dark">
-    <div class="container">
+    <div class="container mt-5">
       <div
         class="row justify-content-center"
         style="height: 500px; overflow: scroll"
       >
-        <div class="col-lg-8 mt-5">
+        <div class="col-lg-8">
           <table class="table">
             <thead>
               <tr>
@@ -27,15 +27,7 @@
                 <th>Image</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>title</td>
-                <td>price</td>
-                <td>Rating</td>
-                <td>Image</td>
-              </tr>
-            </tbody>
+            <tbody id="items"></tbody>
           </table>
         </div>
       </div>
@@ -43,10 +35,11 @@
 
     <div class="row justify-content-center">
       <div class="col-md-5 showDetail">
-        <div class="card card-body bg-info d-none" id="itemDetail"></div>
+        <div class="card card-body bg-info" id="itemDetail"></div>
       </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
