@@ -1,5 +1,15 @@
 <?php require "components/header.php"; ?>
 
+<?php
+
+session_start();
+
+if (!isset($_SESSION['user'])) {
+    header('Location: /login.php');
+}
+
+?>
+
 <div class="container">
     <div class="row justify-content-center mt-5 ">
         <div class="col-lg-3">
@@ -10,8 +20,8 @@
         </div>
         <div class="col-lg-6">
             <div class="card card-body bg-light-subtle">
-                <form>
-                    <button class="btn btn-danger w-100">Logout</button>
+                <form action="actions/logout.php" method="POST">
+                    <button name="logout" class="btn btn-danger w-100">Logout</button>
                 </form>
             </div>
         </div>

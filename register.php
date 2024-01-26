@@ -1,5 +1,15 @@
 <?php require "components/header.php"; ?>
 
+<?php
+
+session_start();
+
+if (isset($_SESSION['user'])) {
+    header('Location: /');
+}
+
+?>
+
 <div class="container">
     <div class="row justify-content-center mt-5 ">
         <div class="col-lg-3">
@@ -10,28 +20,28 @@
         </div>
         <div class="col-lg-6">
             <div class="card card-body bg-light-subtle">
-                <form>
+                <form method="POST" action="actions/register.php">
                     <div class="mb-4">
                         <label for="name" class="fs-6">Name</label>
-                        <input type="text" name="name" id="name" class="form-control" required>
+                        <input type="text" name="name" id="name" class="form-control">
                     </div>
 
                     <div class="mb-4">
                         <label for="email" class="fs-6">Email</label>
-                        <input type="text" name="email" id="email" class="form-control" required>
+                        <input type="text" name="email" id="email" class="form-control">
                     </div>
 
                     <div class="mb-4">
                         <label for="password" class="fs-6">Password</label>
-                        <input type="password" name="password" id="password" class="form-control" required>
+                        <input type="password" name="password" id="password" class="form-control">
                     </div>
 
                     <div class="mb-4">
                         <label for="confirm_password" class="fs-6">Confirm Password</label>
-                        <input type="password" name="confrim_password" id="confirm_password" class="form-control" required>
+                        <input type="password" name="confirm_password" id="confirm_password" class="form-control">
                     </div>
 
-                    <button class="btn btn-success w-100">Regsiter</button>
+                    <button name="register" class="btn btn-success w-100">Regsiter</button>
                 </form>
             </div>
         </div>

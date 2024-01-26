@@ -10,7 +10,12 @@
         </div>
         <div class="col-lg-6">
             <div class="card card-body bg-light-subtle">
-                <div>Welcome</div>
+                <?php session_start(); ?>
+                <?php if (isset($_SESSION['user'])) : ?>
+                    <div>Welcome <?= $_SESSION['user']['name']; ?></div>
+                <?php else : ?>
+                    <div>Hello Please Login Account.</div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

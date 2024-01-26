@@ -10,8 +10,7 @@
         </div>
         <div class="col-lg-6">
             <div class="card card-body bg-light-subtle">
-                <form>
-
+                <form action="actions/login.php" method="POST">
                     <div class="mb-4">
                         <label for="email" class="fs-6">Email</label>
                         <input type="text" name="email" id="email" class="form-control" required>
@@ -22,7 +21,7 @@
                         <input type="password" name="password" id="password" class="form-control" required>
                     </div>
 
-                    <button class="btn btn-primary w-100">Logoin</button>
+                    <button name="login" class="btn btn-primary w-100">Logoin</button>
                 </form>
             </div>
         </div>
