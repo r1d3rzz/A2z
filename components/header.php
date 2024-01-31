@@ -14,3 +14,5 @@
 </head>
 
 <body class="bg-dark">
+
+    <?php require "navbar.php"; ?>
