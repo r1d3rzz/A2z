@@ -57,9 +57,12 @@ function time_ago($timestamp)
                                     <td><?= $work['id']; ?></td>
                                     <td><?= $work['name']; ?></td>
                                     <td><?= time_ago($work['created_at']); ?></td>
-                                    <td>
-                                        <button class="btn btn-sm btn-warning rounded-2">Edit</button>
-                                        <button class="btn btn-sm btn-danger rounded-2">Del</button>
+                                    <td class="d-flex align-items-center">
+                                        <a href="/todo/editTodo.php?id=<?= $work['id']; ?>" class="btn btn-sm btn-warning rounded-2 me-2">Edit</a>
+                                        <form action="/actions/todo/delete.php" method="POST">
+                                            <input type="hidden" value="<?= $work['id'] ?>" name="id">
+                                            <button onclick="return confirm('Are you sure delete this?')" class="btn btn-sm btn-danger rounded-2">Del</button>
+                                        </form>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
